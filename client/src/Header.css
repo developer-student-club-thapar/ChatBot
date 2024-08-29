@@ -1,49 +1,117 @@
 /* Header.css */
 .header {
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 50px;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    border-bottom: 1px solid #e0e0e0;
+  width: 82.35%;
+  height: 53px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-left h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.dev-button,
+.logout-button {
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.dev-button {
+  color: #000;
+}
+
+.logout-button {
+  background-color: #000;
+  color: #fff;
+}
+
+.dev-button:hover,
+.logout-button:hover {
+  opacity: 0.8;
+}
+
+.logout-button:hover {
+  background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .header {
+    width: 95%; /* Adjust width for medium screens */
   }
-  
+
   .header-left h2 {
-    margin: 0;
-    font-size: 20px;
-    color: #000;
+    font-size: 18px; /* Adjust font size */
   }
-  
-  .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .dev-button, .logout-button {
-    background-color: transparent;
-    border: 1px solid #000;
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 14px;
-  }
-  
+
+  .dev-button,
   .logout-button {
-    background-color: #000;
-    color: #fff;
+    padding: 4px 12px; /* Adjust padding for medium screens */
+    font-size: 12px; /* Adjust font size */
   }
-  
-  .dev-button:hover, .logout-button:hover {
-    opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .header {
+    width: 95%; /* Adjust width for smaller screens */
   }
-  
-  .logout-button:hover {
-    background-color: #333;
+
+  .header-left h2 {
+    font-size: 16px; /* Adjust font size */
   }
-  
+
+  .dev-button,
+  .logout-button {
+    padding: 3px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    height: auto; /* Adjust height */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .header-left,
+  .header-right {
+    width: 95%; /* Full width for header items */
+    display: flex;
+    justify-content: space-between; /* Space out items */
+  }
+
+  .header-left {
+    margin-bottom: 10px; /* Add margin to separate sections */
+  }
+
+  .header-right {
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+
+  .dev-button,
+  .logout-button {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 5px; /* Add top margin for spacing */
+  }
+}

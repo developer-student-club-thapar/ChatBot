@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     background-color: #202124;
-    background-image: url('https://via.placeholder.com/150'); /* Placeholder for the background image */
+    background-image: url('./assets/backg.png'); /* Placeholder for the background image */
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

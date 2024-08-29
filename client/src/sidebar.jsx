@@ -1,63 +1,43 @@
 // Sidebar.js
-import React from "react";
-import "./Sidebar.css";
+import React from 'react';
+import './Sidebar.css';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="logo">
-        <img src="./image" alt="Ask Thapar Logo" />
+        <img
+          src="https://seeklogo.com/images/G/google-developers-logo-F8BF3155AC-seeklogo.com.png"
+          alt="Ask Thapar Logo"
+        />
         <h2>Ask Thapar</h2>
       </div>
       <ul className="menu">
         <li className="menu-item active">
           <span role="img" aria-label="Chat">
             💬
-          </span>{" "}
+          </span>{' '}
           Chat
         </li>
-        <li className="menu-item">
-          <span role="img" aria-label="Projects">
-            📂
-          </span>{" "}
-          Projects
+        <li>
+          <span role="img" aria-label="Projects"></span> <br />
         </li>
-        <li className="menu-item">
-          <span role="img" aria-label="Template">
-            📄
-          </span>{" "}
-          Template
+        <li>
+          <span role="img" aria-label="Template"></span> <br />
         </li>
-        <li className="menu-item">
-          <span role="img" aria-label="Documents">
-            🗂️
-          </span>{" "}
-          Documents
+        <li>
+          <span role="img" aria-label="Documents"></span> <br />
         </li>
       </ul>
       <div className="settings-help">
-        <p>Settings & Help</p>
+        <h3></h3>
         <ul>
-          <li className="menu-item">
-            <span role="img" aria-label="Settings">
-              ⚙️
-            </span>{" "}
-            Settings
-          </li>
-          <li className="menu-item">
-            <span role="img" aria-label="Help">
-              ❓
-            </span>{" "}
-            Help
-          </li>
+            <br />
+            <br />
         </ul>
       </div>
       <div className="user-profile">
-        <img
-          src="user-profile-url"
-          alt="User"
-          className="profile-pic"
-        />
+        <img src="user-profile-url" alt="User" className="profile-pic" />
         <div className="user-info">
           <p className="user-name">Jane Doe</p>
           <p className="user-email">janedoe@thapar.edu</p>
