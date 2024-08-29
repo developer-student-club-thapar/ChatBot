@@ -1,0 +1,73 @@
+.chatbot-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 85%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+  }
+  
+  .chatbot-header {
+    margin-bottom: 40px;
+  }
+  
+  .chatbot-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .chatbot-header p {
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .chatbot-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .option-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .option-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .option-content p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Icon colors */
+  .green-icon {
+    color: green;
+  }
+  
+  .yellow-icon {
+    color: #f9a825;
+  }
+  
+  .red-icon {
+    color: red;
+  }
+  
+  .blue-icon {
+    color: #1e88e5;
+  }
+  

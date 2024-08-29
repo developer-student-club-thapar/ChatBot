@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    background-color: #202124;
+    background-image: url('https://via.placeholder.com/150'); /* Placeholder for the background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Signup Form Container */
+.signup-form {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Heading */
+.signup-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.977);
+    text-align: center;
+}
+
+/* Input Fields */
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+
+/* Submit Button */
+.signup-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.signup-form label {
+    text-align: left; /* Ensures text is aligned to the left */
+    display: block;   /* Makes sure the label takes up the full width */
+    margin-bottom: 5px; /* Adds some space between the label and input */
+    color: #000;
+}
+
+/* Button Hover Effect */
+.signup-form button[type="submit"]:hover {
+    background-color: #433d3d;
+}
+
+/* Link Styling */
+.signup-form a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Link Hover Effect */
+.signup-form a:hover {
+    text-decoration: underline;
+}
+
+/* Eye Icon for Password */
+.signup-form .password-toggle {
+    position: relative;
+}
+
+.signup-form .password-toggle input {
+    padding-right: 40px;
+}
+
+.signup-form .password-toggle .toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#loginAlready {
+    color:#000;
+}
