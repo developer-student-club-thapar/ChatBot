@@ -1,4 +1,4 @@
-
+import "./bot.css"
 import FooterForm from "./Footerform"
 
 import Sidebar from "./sidebar"
@@ -10,10 +10,9 @@ import Dock from "./Dock"
 
 export default function Bot(){
     return(
-        <div>
+        <div className="mainPg">
             <FooterForm/>
-
-
+            
             <Sidebar/>
 
             <Header/>
