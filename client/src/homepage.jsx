@@ -17,7 +17,6 @@ export default function Signup() {
             <br></br><br></br>
             <Link to="/signup"><button>Go to Signup</button></Link>
 
-
         </div>
     );
 }
