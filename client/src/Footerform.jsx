@@ -1,31 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
-import './FooterForm.css';
+import { auth } from './firebase';
+import './footerForm.css';
 
 function FooterForm() {
     const [prompt, setPrompt] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
+    const [userId, setUserId] = useState(null);
+
+
+    useEffect(() => {
+        // Get the currently authenticated user
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            if (user) {
+                setUserId(user.uid);  // Set the user ID
+            } else {
+                console.log("No user is signed in.");
+                alert("Sign in to use Chatbot")
+            }
+        });
+
+        // Clean up the subscription
+        return () => unsubscribe();
+    }, []);
+
+
 
     const handleInputChange = (event) => {
         setPrompt(event.target.value);
         setCharacterCount(event.target.value.length);
     };
+   
 
     const handleSendClick = async () => {
+        if (!userId) {
+            console.error('User is not authenticated.');
+            return;
+        }
+
         try {
             // Make a POST request to the FastAPI backend
-            const response = await axios.post('http://localhost:8000/chat', {            // change port according to machine rn for testing later we will install CORS
-                user_id: 'some_unique_user_id',                                          // Replace with actual user ID=> from firebase
+            const response = await axios.post('http://localhost:8000/chat', {
+                user_id: userId,                                          // Use the Firebase user ID
                 message: prompt,
             });
 
             // Handle the response from FastAPI
-            console.log('AI Response:', response.data.response);      
+            console.log('AI Response:', response.data.response);
             // You can update the UI with the AI response here
         } catch (error) {
             console.error('Error sending prompt:', error);
         }
     };
+
 
     return (
         <div className="footer-form">

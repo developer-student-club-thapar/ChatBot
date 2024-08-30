@@ -11,13 +11,13 @@ import Dock from "./Dock"
 export default function Bot(){
     return(
         <div className="mainPg">
-            <FooterForm/>
-            
-            <Sidebar/>
+           
+           <Header />
+           <Sidebar />
+           <Dock />
+           <FooterForm/>
 
-            <Header/>
-
-            <Dock/>
+           
             
         </div>
     )

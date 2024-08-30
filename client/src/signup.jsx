@@ -18,7 +18,10 @@ export default function Signup() {
         e.preventDefault();
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            
+            
             const user = userCredential.user;
+           
 
             // Save user data (excluding password) in Firestore
             await setDoc(doc(db, "users", user.uid), {
