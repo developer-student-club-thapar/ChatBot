@@ -47,6 +47,7 @@ function FooterForm() {
 
             // Handle the response from FastAPI
             console.log('AI Response:', response.data.response);
+            alert("check console");
             // You can update the UI with the AI response here
         } catch (error) {
             console.error('Error sending prompt:', error);
