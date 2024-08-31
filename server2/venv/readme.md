@@ -4,7 +4,7 @@ pip install -r requirements.txt  (need python installed previously in your syste
 
 
 # after this type-> 
-venv\Scrvipts\activate     
+venv\Scripts\activate     
 # if the above command throws some erroor its probably due to windows(for windows users) security error
 # in such case write below command in terminal->
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

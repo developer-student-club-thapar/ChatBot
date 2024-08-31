@@ -2,7 +2,7 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ userName, userEmail }) => {
   return (
     <div className="sidebar">
       <div className="logo">
@@ -14,10 +14,7 @@ const Sidebar = () => {
       </div>
       <ul className="menu">
         <li className="menu-item active">
-          <span role="img" aria-label="Chat">
-            💬
-          </span>{' '}
-          Chat
+          <span role="img" aria-label="Chat">💬</span> Chat
         </li>
         <li>
           <span role="img" aria-label="Projects"></span> <br />
@@ -32,15 +29,15 @@ const Sidebar = () => {
       <div className="settings-help">
         <h3></h3>
         <ul>
-            <br />
-            <br />
+          <br />
+          <br />
         </ul>
       </div>
       <div className="user-profile">
         <img src="user-profile-url" alt="User" className="profile-pic" />
         <div className="user-info">
-          <p className="user-name">Jane Doe</p>
-          <p className="user-email">janedoe@thapar.edu</p>
+          <p className="user-name">{userName}</p>
+          <p className="user-email">{userEmail}</p>
         </div>
       </div>
     </div>
